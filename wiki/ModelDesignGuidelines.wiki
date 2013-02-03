@@ -31,7 +31,7 @@ class Post {
 }
 }}}
 
-Of course then you'll need to do a bit of house-keeping manually (i.e. delete all Posts when a Blog is deleted) but this shouldn't be that hard.
+Of course then you'll need to do a bit of house-keeping manually (i.e. delete all Posts when a Blog is deleted) but this shouldn't be that hard - and we may even provide [https://code.google.com/p/pongo/issues/detail?id=6 automated support for this at some point]. 
 
 = Data types supported =
 

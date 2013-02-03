@@ -1,0 +1,17 @@
+#Guidelines for designing the Emfatic model of your Pongos
+
+= Break down big objects into multiple collections =
+
+Each Pongo cannot be larger than 16MB (Mongo's restriction). Bear that in mind when you're designing the break-down of your objects and use multiple collections and non-containment references instead.
+
+= Data types supported =
+
+The following primitive data types are supported for your attrs
+
+* int
+* String
+* float
+* long
+* boolean
+
+Custom datatypes are not supported yet

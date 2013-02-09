@@ -39,7 +39,7 @@ public class Post extends Pongo {
 	...
 }}}
 
-Any code you add between the // protected region begin/end lines will be preserved when you regenerate the code. For example, you can override the preSave method of Pongo
+Any code you add between the `// protected region begin/end` lines will be preserved when you regenerate the code. For example, you can override the preSave method of Pongo
 
 {{{
 ...

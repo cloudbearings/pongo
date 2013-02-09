@@ -7,7 +7,11 @@ Each Pongo cannot be larger than 16MB (Mongo's restriction). Bear that in mind w
 For example instead of keeping all the contents of a blog in one document:
 
 {{{
-@collection
+@db
+class BlogHostingService {
+  val Blog[*] blogs;
+}
+
 class Blog {
   val Post[*] posts;
 }
@@ -20,12 +24,16 @@ class Post {
 you should consider using 2 collections and a non-containment reference (ref instead of val) instead:
 
 {{{
-@collection
+@db
+class BlogHostingService {
+  val Blog[*] blogs;
+  val Post[*] posts;
+}
+
 class Blog {
   ref Post[*] posts;
 }
 
-@collection
 class Post {
 
 }

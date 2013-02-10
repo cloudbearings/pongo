@@ -1,5 +1,8 @@
 =How to use Pongo=
 
-  * Download the latest version from the Downloads page
-  * Extract the downloaded zip file
+  * Download the latest version from the [http://code.google.com/p/pongo/downloads/list Downloads page]
+  * Extract the zip file you downloaded. Inside it you will find 3 jars
+    * pongo.jar
+    * pongo-runtime.jar
+    * pongo-runtime-and-dependencies.jar
   * To generate code from your .emf file use the following command: `java -jar pongo.jar full-path-of-your.emf`

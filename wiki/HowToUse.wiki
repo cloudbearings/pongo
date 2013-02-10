@@ -9,5 +9,5 @@
   * To generate code from your .emf file use the following command: `java -jar pongo.jar full-path-of-your.emf`
   * If everything goes well, you'll find the generated code next to your .emf file
   * The next step is to add one of the two jars below to the classpath of your project
-    * *(Recommended)* `pongo-runtime-and-dependencies.jar` contains all the classes you will need (including the MongoDB driver)
+    * *(Recommended)* `pongo-runtime-and-dependencies.jar` contains all the extras you will need to run your generated code (including the MongoDB driver)
     * `pongo-runtime.jar` contains the Pongo runtime classes but not their dependencies. If you choose this jar file, you will need to add the [http://docs.mongodb.org/ecosystem/drivers/java/ MongoDB driver] and the [http://commons.apache.org/collections/ Apache Commons Collections] jars to your classpath separately

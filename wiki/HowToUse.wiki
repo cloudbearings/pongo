@@ -1,3 +1,4 @@
+#labels Featured
 =How to use Pongo=
 
   * Download the latest version from the [http://code.google.com/p/pongo/downloads/list Downloads page]

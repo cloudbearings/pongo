@@ -1,6 +1,6 @@
 =Stubs=
 
-To enable referring to Pongos defined outside the Emfatic domain model, Pongo provides support for `stubs`. A stub is an Emfatic EClass that has been annotated with `@stub(javaClass="...")`. Wherever the stub is referenced/extended in the domain model, it will be replaced with the respective `javaClass` in the generated code. For example
+To enable referring to Pongos defined outside the Emfatic domain model, Pongo provides support for `stubs`. A stub is an Emfatic EClass that has been annotated with `@stub(javaClass="...")`. Wherever the stub is referenced/extended in the domain model, it will be replaced with the respective `javaClass` in the generated code. For example the following domain model
 
 {{{
 package com.googlecode.pongo.tests.stubs.model;

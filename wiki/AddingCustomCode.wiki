@@ -1,6 +1,6 @@
 = Adding Custom Code =
 
-To add custom code to one of your generated Pongo classes, you will need to use the @customize annotation in your Emfatic data model definition. For example
+To add custom code to one of your generated Pongo classes, you will need to use the `@customize` annotation in your Emfatic data model definition. For example
 
 {{{
 @customize

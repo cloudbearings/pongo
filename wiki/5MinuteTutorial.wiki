@@ -89,7 +89,7 @@ public class App {
 
     	Mongo mongo = new Mongo();
         Blog blog = new Blog(mongo.getDB("blog"));
-
+        
     	System.out.println(blog.getPosts().size());
     	
     	for (Post post : blog.getPosts()) {
@@ -97,6 +97,8 @@ public class App {
     	    System.out.println(post.getComments().size() + " comment(s)");
     	}
     	
+        // Generated from the @searchable title attribute of Post
+        System.out.println(blog.getPosts().findOneByTitle("A post").getAuthor().getName();)
     }
     
 }

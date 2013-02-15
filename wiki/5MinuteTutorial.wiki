@@ -4,7 +4,7 @@
 This tutorial assumes that you have MongoDB up and running, you've downloaded a copy of Pongo, and you're working in Eclipse.
 
   * Create an Eclipse Java project called `com.googlecode.pongo.examples.miniblog`
-  * Create a package called `com.googlecode.pongo.examples.miniblog.model`
+  * Create a package called `com.googlecode.pongo.examples.miniblog.model.model`
   * Inside the package create a file called `miniblog.emf` and copy-paste the following code into it
 
 {{{
@@ -40,7 +40,24 @@ class Author {
   * Copy and paste the following code into it
 
 {{{
-More code here
+package com.googlecode.pongo.examples.minigblog;
+
+import java.util.*;
+import com.mongodb.*;
+import com.googlecode.pongo.runtime.*;
+
+class App {
+    public static void main(String[] args) {
+        Blog blog = new Blog(new Mongo().getDb("blog"));
+
+        Post post = new Post();
+        post.setTitle("A post");
+
+
+    }
+}
+
+
 }}}
 
  * Run the `App` class

@@ -5,7 +5,7 @@ This tutorial assumes that you have [http://www.mongodb.org/ MongoDB] up and run
 
   * Create an Eclipse Java project called `com.googlecode.pongo.examples.miniblog`
   * Create a folder called `lib` into it and place there a copy of `pongo-and-dependencies.jar`
-  * Right-click `pongo-and-depenencies.jar` and select `Build path->Add to build path`
+  * Right-click `pongo-runtime-and-dependencies.jar` and select `Build path->Add to build path`
   * Create a package called `com.googlecode.pongo.examples.miniblog.model.model`
   * Inside the package create a file called `miniblog.emf` and copy-paste the following code into it
 

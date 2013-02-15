@@ -10,7 +10,7 @@ This tutorial assumes that you have [http://www.mongodb.org/ MongoDB] up and run
   * Inside the package create a file called `miniblog.emf` and copy-paste the following code into it
 
 {{{
-package com.googlecode.pongo.examples.miniblog;
+package com.googlecode.pongo.examples.miniblog.model;
 
 @db
 class Blog {

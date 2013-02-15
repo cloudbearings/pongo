@@ -46,14 +46,21 @@ class Author {
 package com.googlecode.pongo.examples.minigblog;
 
 import java.util.*;
-import org.mongodb.*;
+import com.mongodb.*;
 import com.googlecode.pongo.runtime.*;
+import com.googlecode.pongo.examples.miniblog.model.*;
 
 public class App {
     
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception {
+        App app = new App();
+        app.writeStuff();
+        app.readStuff();
+    }
+    
+    public void writeStuff() throws Exception {
         Mongo mongo = new Mongo();
+        mongo.dropDatabase("blog");
         Blog blog = new Blog(mongo.getDB("blog"));
 
         Post post = new Post();
@@ -75,10 +82,24 @@ public class App {
         blog.getPosts().add(post);
 
         // Syncs with the underlying database
-        blog.sync();
+        blog.sync(true);    	
     }
-}
+    
+    public void readStuff() throws Exception {
 
+    	Mongo mongo = new Mongo();
+        Blog blog = new Blog(mongo.getDB("blog"));
+
+    	System.out.println(blog.getPosts().size());
+    	
+    	for (Post post : blog.getPosts()) {
+    		System.out.println(post.getTitle() + " - " + post.getAuthor().getName());
+    		System.out.println(post.getComments().size() + " comment(s)");
+    	}
+    	
+    }
+    
+}
 }}}
 
  * Run the `App` class

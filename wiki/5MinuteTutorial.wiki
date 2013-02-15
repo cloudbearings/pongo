@@ -4,6 +4,8 @@
 This tutorial assumes that you have MongoDB up and running, you've downloaded a copy of Pongo, and you're working in Eclipse.
 
   * Create an Eclipse Java project called `com.googlecode.pongo.examples.miniblog`
+  * Create a folder called `lib` into it and place there a copy of `pongo-and-dependencies.jar`
+  * Right-click `pongo-and-depenencies.jar` and select `Build path->Add to build path`
   * Create a package called `com.googlecode.pongo.examples.miniblog.model.model`
   * Inside the package create a file called `miniblog.emf` and copy-paste the following code into it
 
@@ -46,14 +48,33 @@ import java.util.*;
 import com.mongodb.*;
 import com.googlecode.pongo.runtime.*;
 
-class App {
+public class App {
+    
     public static void main(String[] args) {
-        Blog blog = new Blog(new Mongo().getDb("blog"));
+
+        Mongo mongo = new Mongo();
+        Blog blog = new Blog(mongo.getDB("blog"));
 
         Post post = new Post();
         post.setTitle("A post");
+        
+        Author author = new Author();
+        author.setName("Joe Doe");
+        blog.getAuthors().add(author);
+        post.setAuthor(author);
+        
+        Comment comment = new Comment();
+        comment.setText("A comment");
+        post.getComments().add(comment);
+        
+        Comment reply = new Comment();
+        reply.setText("A reply");
+        comment.getReplies().add(reply);
+        
+        blog.getPosts().add(post);
 
-
+        // Syncs with the underlying database
+        blog.sync();
     }
 }
 

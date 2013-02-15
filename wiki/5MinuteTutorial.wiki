@@ -1,0 +1,13 @@
+= 5-minute tutorial =
+
+This tutorial assumes that you have MongoDB up and running, you've downloaded a copy of Pongo, and you're working in Eclipse.
+
+  # Create an Eclipse Java project called `com.googlecode.pongo.examples.miniblog`
+  # Create a package called `com.googlecode.pongo.examples.miniblog`
+  # Inside the package create a file called `miniblog.emf` and copy-paste the following code into it
+
+{{{
+Code here
+}}}
+
+  # 

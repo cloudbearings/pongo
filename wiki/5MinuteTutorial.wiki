@@ -93,8 +93,8 @@ public class App {
     	System.out.println(blog.getPosts().size());
     	
     	for (Post post : blog.getPosts()) {
-    		System.out.println(post.getTitle() + " - " + post.getAuthor().getName());
-    		System.out.println(post.getComments().size() + " comment(s)");
+    	    System.out.println(post.getTitle() + " - " + post.getAuthor().getName());
+    	    System.out.println(post.getComments().size() + " comment(s)");
     	}
     	
     }

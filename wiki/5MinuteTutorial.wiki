@@ -1,13 +1,46 @@
+#labels Featured
 = 5-minute tutorial =
 
 This tutorial assumes that you have MongoDB up and running, you've downloaded a copy of Pongo, and you're working in Eclipse.
 
-  # Create an Eclipse Java project called `com.googlecode.pongo.examples.miniblog`
-  # Create a package called `com.googlecode.pongo.examples.miniblog`
-  # Inside the package create a file called `miniblog.emf` and copy-paste the following code into it
+  * Create an Eclipse Java project called `com.googlecode.pongo.examples.miniblog`
+  * Create a package called `com.googlecode.pongo.examples.miniblog.model`
+  * Inside the package create a file called `miniblog.emf` and copy-paste the following code into it
 
 {{{
-Code here
+package com.googlecode.pongo.examples.miniblog;
+
+@db
+class Blog {
+    val Post[*] posts;
+    val Author[*] authors;
+}
+
+class Post {
+    @searchable
+    attr String title;
+    attr String body;
+    ref Author author;
+}
+
+class Comment {
+    attr String from;
+    attr String body;
+    val Comment[*] replies;
+}
+
+class Author {
+    @searchable
+    attr String name;
+    attr String email;
+}
 }}}
 
-  # 
+  * Create a new class called `App` under the `com.googlecode.pongo.examples.miniblog` package
+  * Copy and paste the following code into it
+
+{{{
+More code here
+}}}
+
+ * Run the `App` class

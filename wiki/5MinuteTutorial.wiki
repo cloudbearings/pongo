@@ -37,7 +37,8 @@ class Author {
     attr String email;
 }
 }}}
-
+  * Invoke the Pongo generator as follows: `java -jar pongo.jar miniblog.emf` (you'll need to specify the full path of `miniblog.emf` here)
+  * Right-click your Java project in Eclipse and select `Refresh`. If everything has gone well, you should see a bunch of Java classes next to `miniblog.emf`
   * Create a new class called `App` under the `com.googlecode.pongo.examples.miniblog` package
   * Copy and paste the following code into it
 
@@ -77,7 +78,6 @@ public class App {
         blog.sync();
     }
 }
-
 
 }}}
 

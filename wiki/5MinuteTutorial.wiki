@@ -98,7 +98,7 @@ public class App {
     	}
     	
         // Generated from the @searchable title attribute of Post
-        System.out.println(blog.getPosts().findOneByTitle("A post").getAuthor().getName();)
+        System.out.println(blog.getPosts().findOneByTitle("A post").getAuthor().getName());
     }
     
 }

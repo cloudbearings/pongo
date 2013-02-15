@@ -1,7 +1,7 @@
 #labels Featured
 = 5-minute tutorial =
 
-This tutorial assumes that you have MongoDB up and running, you've downloaded a copy of Pongo, and you're working in Eclipse.
+This tutorial assumes that you have [http://www.mongodb.org/ MongoDB] up and running, you've [https://code.google.com/p/pongo/downloads/list downloaded] a copy of Pongo, you're confident with running Java JAR files from the command line, and you're working in Eclipse.
 
   * Create an Eclipse Java project called `com.googlecode.pongo.examples.miniblog`
   * Create a folder called `lib` into it and place there a copy of `pongo-and-dependencies.jar`
@@ -40,13 +40,13 @@ class Author {
   * Invoke the Pongo generator as follows: `java -jar pongo.jar miniblog.emf` (you'll need to specify the full path of `miniblog.emf` here)
   * Right-click your Java project in Eclipse and select `Refresh`. If everything has gone well, you should see a bunch of Java classes next to `miniblog.emf`
   * Create a new class called `App` under the `com.googlecode.pongo.examples.miniblog` package
-  * Copy and paste the following code into it
+  * Copy and paste the following code into your `App` class
 
 {{{
 package com.googlecode.pongo.examples.minigblog;
 
 import java.util.*;
-import com.mongodb.*;
+import org.mongodb.*;
 import com.googlecode.pongo.runtime.*;
 
 public class App {

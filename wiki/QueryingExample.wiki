@@ -1,3 +1,4 @@
+#labels Featured,Phase-Implementation
 = Querying: Zoo Example =
 
 This tutorial assumes that you have [http://www.mongodb.org/ MongoDB] up and running, you've [https://code.google.com/p/pongo/downloads/list downloaded] a copy of Pongo, you know how to run Java JAR files from the command line, and you're working in Eclipse.
